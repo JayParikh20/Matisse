@@ -4,8 +4,7 @@
 [![Build Status](https://travis-ci.org/zhihu/Matisse.svg)](https://travis-ci.org/zhihu/Matisse) [ ![Download](https://api.bintray.com/packages/zhihu/maven/matisse/images/download.svg) ](https://bintray.com/zhihu/maven/matisse/_latestVersion)
 
 Forked!
-
-changelog
+Changelog
 - In case of single selection, when user clicks other image,
 the other image is selected instead of showing "max 1 selection allowed" message
 
