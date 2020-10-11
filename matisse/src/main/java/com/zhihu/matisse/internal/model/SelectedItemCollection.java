@@ -167,7 +167,9 @@ public class SelectedItemCollection {
     }
 
     public IncapableCause isAcceptable(Item item) {
-        if (maxSelectableReached()) {
+        if(clearSelection()){
+            mItems.clear();
+        } else if (maxSelectableReached()) {
             int maxSelectable = currentMaxSelectable();
             String cause;
 
@@ -199,6 +201,11 @@ public class SelectedItemCollection {
 
     public boolean maxSelectableReached() {
         return mItems.size() == currentMaxSelectable();
+    }
+
+    public boolean clearSelection() {
+        SelectionSpec spec = SelectionSpec.getInstance();
+        return mItems.size() == 1 && currentMaxSelectable() == 1;
     }
 
     // depends
